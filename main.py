@@ -47,8 +47,8 @@ choice_letter = random.choice(list_letter)
 if check_dates() == True:
     send_mail = choice_letter.replace("[NAME]", name).replace("Angela", "from Sahrish ❤️")
 # 4. Send the letter generated in step 3 to that person's email address.
-    my_email = "ranisehrish1830@gmail.com"
-    my_password = "qyqqueiqflbuympb"
+    my_email = "my email"
+    my_password = "password"
     massage = f"Subject:Happy Birthday.\n\n{send_mail}"
     with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
         connection.starttls()
