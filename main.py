@@ -1,4 +1,5 @@
 ##################### Extra Hard Starting Project ######################
+import os
 import pandas
 from datetime import datetime
 import random
@@ -47,8 +48,10 @@ choice_letter = random.choice(list_letter)
 if check_dates() == True:
     send_mail = choice_letter.replace("[NAME]", name).replace("Angela", "from Sahrish ❤️")
 # 4. Send the letter generated in step 3 to that person's email address.
-    my_email = "my email"
-    my_password = "password"
+    my_email = "ranisehrish1830@gmail.com"
+    my_password = "qyqqueiqflbuympb"
+    my_email = os.environ.get("MY_EMAIL")
+    my_password = os.environ.get("MY_PASSWORD")
     massage = f"Subject:Happy Birthday.\n\n{send_mail}"
     with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
         connection.starttls()
